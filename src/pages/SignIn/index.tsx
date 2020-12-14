@@ -1,6 +1,9 @@
 import React from 'react';
 
-import { FaHeart } from 'react-icons/fa';
+import { FaHeart, FaEyeSlash } from 'react-icons/fa';
+
+import Input from '../../components/Input';
+import Button from '../../components/Button';
 
 import {
   Container,
@@ -19,8 +22,13 @@ const SignIn: React.FC = () => (
       <Form>
         <h1>Fazer login</h1>
 
-        <input placeholder="E-mail" />
-        <input type="password" placeholder="Senha" />
+        <Input name="email" placeholder="E-mail" />
+        <Input
+          name="password"
+          icon={FaEyeSlash}
+          type="password"
+          placeholder="Senha"
+        />
 
         <RememberAndForgotPassword>
           <label htmlFor="remember">
@@ -30,7 +38,7 @@ const SignIn: React.FC = () => (
 
           <a href="forgot">Esqueci minha senha</a>
         </RememberAndForgotPassword>
-        <button type="submit">Entrar</button>
+        <Button type="submit">Entrar</Button>
       </Form>
       <SignUp>
         <SignUpContent>

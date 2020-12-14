@@ -39,44 +39,8 @@ export const Form = styled.div`
     line-height: 36px;
     text-align: left;
   }
-
-  > input {
-    background: #fafafc;
-    border-radius: 8px 8px 0 0;
-    border: 1px solid #e6e6f0;
-    padding: 16px;
-    width: 100%;
-    margin-bottom: 0px;
-    color: #6a6180;
-
-    &::placeholder {
-      color: #9c98a6;
-    }
-
-    & + input {
-      margin-top: 0px;
-      margin-bottom: 24px;
-      border-radius: 0 0 8px 8px;
-    }
-  }
-
-  button {
-    background: #04d361;
-    height: 56px;
-    border-radius: 8px;
-    border: 0;
-    padding: 0 16px;
-    color: #fff;
-    width: 100%;
-    font-weight: 600;
-    margin-top: 40px;
-    transition: background-color 0.2s;
-
-    &:hover {
-      background: ${shade(0.2, '#04d361')};
-    }
-  }
 `;
+
 export const RememberAndForgotPassword = styled.div`
   display: flex;
   justify-content: space-between;
