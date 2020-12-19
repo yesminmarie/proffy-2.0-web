@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   background: #fafafc;
-  border-radius: 8px 8px 0 0;
   border: 1px solid #e6e6f0;
   padding: 16px;
   width: 100%;
@@ -12,7 +11,11 @@ export const Container = styled.div`
   display: flex;
   align-items: center;
 
-  & + div {
+  &:first-of-type {
+    border-radius: 8px 8px 0 0;
+  }
+
+  &:last-of-type {
     margin-top: 0px;
     margin-bottom: 24px;
     border-radius: 0 0 8px 8px;

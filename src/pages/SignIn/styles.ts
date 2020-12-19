@@ -41,6 +41,8 @@ export const Form = styled.div`
   }
 `;
 
+export const Inputs = styled.div``;
+
 export const RememberAndForgotPassword = styled.div`
   display: flex;
   justify-content: space-between;

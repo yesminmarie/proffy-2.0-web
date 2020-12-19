@@ -10,6 +10,7 @@ import {
   Content,
   Background,
   Form,
+  Inputs,
   RememberAndForgotPassword,
   SignUp,
   SignUpContent,
@@ -21,15 +22,15 @@ const SignIn: React.FC = () => (
     <Content>
       <Form>
         <h1>Fazer login</h1>
-
-        <Input name="email" placeholder="E-mail" />
-        <Input
-          name="password"
-          icon={FaEyeSlash}
-          type="password"
-          placeholder="Senha"
-        />
-
+        <Inputs>
+          <Input name="email" placeholder="E-mail" />
+          <Input
+            name="password"
+            icon={FaEyeSlash}
+            type="password"
+            placeholder="Senha"
+          />
+        </Inputs>
         <RememberAndForgotPassword>
           <label htmlFor="remember">
             <input type="checkbox" id="remember" value="Lembrar-me" />
