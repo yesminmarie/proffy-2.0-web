@@ -27,7 +27,7 @@ export const Content = styled.div`
   max-width: 700px;
 `;
 
-export const Form = styled.div`
+export const FormContent = styled.div`
   width: 400px;
 
   h1 {
