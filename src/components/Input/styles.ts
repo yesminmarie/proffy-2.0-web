@@ -29,8 +29,20 @@ export const Container = styled.div<ContainerProps>`
         height: 1.5px;
         bottom: 0;
         background: #8257e5;
+        animation: fade 200ms ease-out;
       }
     `}
+
+  @keyframes fade {
+    from {
+      opacity: 0;
+      /* transform: translateY(0); */
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
 
   &:first-of-type {
     border-radius: 8px 8px 0 0;
