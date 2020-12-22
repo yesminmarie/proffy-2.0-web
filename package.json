@@ -19,7 +19,8 @@
     "react-scripts": "4.0.1",
     "styled-components": "^5.2.1",
     "typescript": "^4.0.3",
-    "web-vitals": "^0.2.4"
+    "web-vitals": "^0.2.4",
+    "yup": "^0.32.8"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -47,6 +48,7 @@
   },
   "devDependencies": {
     "@types/styled-components": "^5.1.5",
+    "@types/yup": "^0.29.11",
     "@typescript-eslint/eslint-plugin": "^3.6.1",
     "@typescript-eslint/parser": "^3.6.1",
     "eslint": "^7.11.0",
