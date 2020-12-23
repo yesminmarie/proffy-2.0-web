@@ -1,6 +1,6 @@
 import React, { useCallback, useRef } from 'react';
 
-import { FaEyeSlash } from 'react-icons/fa';
+import { FiEyeOff } from 'react-icons/fi';
 import { FormHandles } from '@unform/core';
 
 import { Form } from '@unform/web';
@@ -73,7 +73,7 @@ const SignUp: React.FC = () => {
             <Input name="email" placeholder="E-mail" />
             <Input
               name="password"
-              icon={FaEyeSlash}
+              icon={FiEyeOff}
               type="password"
               placeholder="Senha"
             />
