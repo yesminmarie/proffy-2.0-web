@@ -1,9 +1,12 @@
-import React, { useCallback } from 'react';
+import React, { useCallback, useRef } from 'react';
 
 import { FaEyeSlash } from 'react-icons/fa';
+import { FormHandles } from '@unform/core';
 
 import { Form } from '@unform/web';
 import * as Yup from 'yup';
+import getValidationErrors from '../../utils/getValidationErrors';
+
 import arrowLeft from '../../assets/arrow-left.svg';
 
 import Input from '../../components/Input';
@@ -25,8 +28,14 @@ interface SignUpFormData {
 }
 
 const SignUp: React.FC = () => {
+  const formRef = useRef<FormHandles>(null);
+
+  console.log(formRef);
+
   const handleSubmit = useCallback(async (data: SignUpFormData) => {
     try {
+      formRef.current?.setErrors({});
+
       const schema = Yup.object().shape({
         name: Yup.string().required('Nome obrigatório'),
         lastname: Yup.string().required('Sobrenome obrigatório'),
@@ -40,7 +49,11 @@ const SignUp: React.FC = () => {
         abortEarly: false,
       });
     } catch (err) {
-      console.log(err);
+      console.log(err.inner);
+
+      const errors = getValidationErrors(err);
+
+      formRef.current?.setErrors(errors);
     }
   }, []);
   return (
@@ -52,7 +65,7 @@ const SignUp: React.FC = () => {
           </a>
         </BackToLogin>
         <FormContent>
-          <Form onSubmit={handleSubmit}>
+          <Form ref={formRef} onSubmit={handleSubmit}>
             <h1>Cadastro</h1>
             <p>Preencha os dados abaixo para começar.</p>
             <Input name="name" placeholder="Nome" />
