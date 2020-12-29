@@ -1,6 +1,7 @@
 import React, { useRef, useCallback } from 'react';
 
-import { FaHeart, FaEyeSlash } from 'react-icons/fa';
+import { FaHeart } from 'react-icons/fa';
+import { FiEyeOff } from 'react-icons/fi';
 import { FormHandles } from '@unform/core';
 import { Form } from '@unform/web';
 import * as Yup from 'yup';
@@ -54,11 +55,11 @@ const SignIn: React.FC = () => {
           password: data.password,
         });
       } catch (err) {
-        console.log(err.inner);
+        if (err instanceof Yup.ValidationError) {
+          const errors = getValidationErrors(err);
 
-        const errors = getValidationErrors(err);
-
-        formRef.current?.setErrors(errors);
+          formRef.current?.setErrors(errors);
+        }
       }
     },
     [signIn],
@@ -75,7 +76,7 @@ const SignIn: React.FC = () => {
               <Input name="email" placeholder="E-mail" />
               <Input
                 name="password"
-                icon={FaEyeSlash}
+                icon={FiEyeOff}
                 type="password"
                 placeholder="Senha"
               />
