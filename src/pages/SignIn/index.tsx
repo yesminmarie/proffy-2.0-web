@@ -5,6 +5,7 @@ import { FiEyeOff } from 'react-icons/fi';
 import { FormHandles } from '@unform/core';
 import { Form } from '@unform/web';
 import * as Yup from 'yup';
+import { Link } from 'react-router-dom';
 
 import { useAuth } from '../../hooks/auth';
 import { useToast } from '../../hooks/toast';
@@ -16,6 +17,7 @@ import Button from '../../components/Button';
 
 import {
   Container,
+  AnimationContainer,
   Content,
   Background,
   FormContent,
@@ -61,6 +63,8 @@ const SignIn: React.FC = () => {
           const errors = getValidationErrors(err);
 
           formRef.current?.setErrors(errors);
+
+          return;
         }
 
         addToast({
@@ -77,38 +81,40 @@ const SignIn: React.FC = () => {
     <Container>
       <Background />
       <Content>
-        <FormContent>
-          <Form ref={formRef} onSubmit={handleSubmit}>
-            <h1>Fazer login</h1>
-            <Inputs>
-              <Input name="email" placeholder="E-mail" />
-              <Input
-                name="password"
-                icon={FiEyeOff}
-                type="password"
-                placeholder="Senha"
-              />
-            </Inputs>
-            <RememberAndForgotPassword>
-              <label htmlFor="remember">
-                <input type="checkbox" id="remember" value="Lembrar-me" />
-                Lembrar-me
-              </label>
+        <AnimationContainer>
+          <FormContent>
+            <Form ref={formRef} onSubmit={handleSubmit}>
+              <h1>Fazer login</h1>
+              <Inputs>
+                <Input name="email" placeholder="E-mail" />
+                <Input
+                  name="password"
+                  icon={FiEyeOff}
+                  type="password"
+                  placeholder="Senha"
+                />
+              </Inputs>
+              <RememberAndForgotPassword>
+                <label htmlFor="remember">
+                  <input type="checkbox" id="remember" value="Lembrar-me" />
+                  Lembrar-me
+                </label>
 
-              <a href="forgot">Esqueci minha senha</a>
-            </RememberAndForgotPassword>
-            <Button type="submit">Entrar</Button>
-          </Form>
-        </FormContent>
-        <SignUp>
-          <SignUpContent>
-            <span>Não tem conta?</span>
-            <a href="login">Cadastre-se</a>
-          </SignUpContent>
-          <span>
-            É de graça <FaHeart />{' '}
-          </span>
-        </SignUp>
+                <a href="forgot">Esqueci minha senha</a>
+              </RememberAndForgotPassword>
+              <Button type="submit">Entrar</Button>
+            </Form>
+          </FormContent>
+          <SignUp>
+            <SignUpContent>
+              <span>Não tem conta?</span>
+              <Link to="signup">Cadastre-se</Link>
+            </SignUpContent>
+            <span>
+              É de graça <FaHeart />{' '}
+            </span>
+          </SignUp>
+        </AnimationContainer>
       </Content>
     </Container>
   );

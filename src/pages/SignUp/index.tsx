@@ -5,6 +5,8 @@ import { FormHandles } from '@unform/core';
 
 import { Form } from '@unform/web';
 import * as Yup from 'yup';
+import { Link } from 'react-router-dom';
+
 import getValidationErrors from '../../utils/getValidationErrors';
 
 import arrowLeft from '../../assets/arrow-left.svg';
@@ -15,6 +17,7 @@ import Button from '../../components/Button';
 import {
   Container,
   Content,
+  AnimationContainer,
   Background,
   BackToLogin,
   FormContent,
@@ -59,28 +62,30 @@ const SignUp: React.FC = () => {
   return (
     <Container>
       <Content>
-        <BackToLogin>
-          <a href="login">
-            <img src={arrowLeft} alt="back" />
-          </a>
-        </BackToLogin>
-        <FormContent>
-          <Form ref={formRef} onSubmit={handleSubmit}>
-            <h1>Cadastro</h1>
-            <p>Preencha os dados abaixo para começar.</p>
-            <Input name="name" placeholder="Nome" />
-            <Input name="lastname" placeholder="Sobrenome" />
-            <Input name="email" placeholder="E-mail" />
-            <Input
-              name="password"
-              icon={FiEyeOff}
-              type="password"
-              placeholder="Senha"
-            />
+        <AnimationContainer>
+          <BackToLogin>
+            <Link to="/">
+              <img src={arrowLeft} alt="back" />
+            </Link>
+          </BackToLogin>
+          <FormContent>
+            <Form ref={formRef} onSubmit={handleSubmit}>
+              <h1>Cadastro</h1>
+              <p>Preencha os dados abaixo para começar.</p>
+              <Input name="name" placeholder="Nome" />
+              <Input name="lastname" placeholder="Sobrenome" />
+              <Input name="email" placeholder="E-mail" />
+              <Input
+                name="password"
+                icon={FiEyeOff}
+                type="password"
+                placeholder="Senha"
+              />
 
-            <Button type="submit">Concluir cadastro</Button>
-          </Form>
-        </FormContent>
+              <Button type="submit">Concluir cadastro</Button>
+            </Form>
+          </FormContent>
+        </AnimationContainer>
       </Content>
       <Background />
     </Container>
