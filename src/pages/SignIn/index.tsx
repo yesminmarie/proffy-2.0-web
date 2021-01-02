@@ -14,6 +14,7 @@ import getValidationErrors from '../../utils/getValidationErrors';
 
 import Input from '../../components/Input';
 import Button from '../../components/Button';
+import Checkbox from '../../components/Checkbox';
 
 import {
   Container,
@@ -99,11 +100,11 @@ const SignIn: React.FC = () => {
                 />
               </Inputs>
               <RememberAndForgotPassword>
-                <label htmlFor="remember">
+                <Checkbox>Lembrar-me</Checkbox>
+                {/* <label htmlFor="remember">
                   <input type="checkbox" id="remember" value="Lembrar-me" />
                   Lembrar-me
-                </label>
-
+                </label> */}
                 <a href="forgot">Esqueci minha senha</a>
               </RememberAndForgotPassword>
               <Button type="submit">Entrar</Button>

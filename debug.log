@@ -1,3 +1,4 @@
 [1210/205102.308:ERROR:directory_reader_win.cc(43)] FindFirstFile: O sistema não pode encontrar o caminho especificado. (0x3)
 [1219/134726.450:ERROR:directory_reader_win.cc(43)] FindFirstFile: O sistema não pode encontrar o caminho especificado. (0x3)
 [1219/134726.459:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\delll\AppData\Local\AVAST Software\Browser\User Data\Crashpad\attachments\f9862c47-d5de-487e-b14b-5d25fc27c9de: O sistema não pode encontrar o caminho especificado. (0x3)
+[0102/143523.355:ERROR:directory_reader_win.cc(43)] FindFirstFile: O sistema não pode encontrar o caminho especificado. (0x3)
