@@ -62,22 +62,6 @@ export const RememberAndForgotPassword = styled.div`
   display: flex;
   justify-content: space-between;
 
-  label {
-    font-size: 14px;
-    display: flex;
-    align-items: center;
-
-    color: #9c98a6;
-
-    input[type='checkbox'] {
-      margin-right: 16px;
-      background: #fafafc;
-
-      border: 1px solid #e6e6f0;
-      border-radius: 8px;
-    }
-  }
-
   a {
     color: #9c98a6;
     font-size: 14px;

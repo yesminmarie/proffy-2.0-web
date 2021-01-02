@@ -101,10 +101,7 @@ const SignIn: React.FC = () => {
               </Inputs>
               <RememberAndForgotPassword>
                 <Checkbox>Lembrar-me</Checkbox>
-                {/* <label htmlFor="remember">
-                  <input type="checkbox" id="remember" value="Lembrar-me" />
-                  Lembrar-me
-                </label> */}
+
                 <a href="forgot">Esqueci minha senha</a>
               </RememberAndForgotPassword>
               <Button type="submit">Entrar</Button>
