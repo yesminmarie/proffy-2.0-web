@@ -22,9 +22,23 @@ export const Container = styled.div<ContainerProps>`
   align-items: center;
 
   ${props =>
+    props.isFilled &&
+    css`
+      ::after {
+        position: absolute;
+        content: ' ';
+        display: inline-block;
+        width: 1.5px;
+        height: 80%;
+        left: 0;
+        background: #8257e5;
+        animation: fade 200ms ease-out;
+      }
+    `}
+
+  ${props =>
     props.isErrored &&
     css`
-      /* border-color: #c53030; */
       ::after {
         position: absolute;
         content: ' ';
