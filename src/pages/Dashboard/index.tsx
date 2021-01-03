@@ -1,5 +1,7 @@
 import React from 'react';
 
-const Dashboard: React.FC = () => <h1>Dashboard</h1>;
+import homeImg from '../../assets/home.svg';
+
+const Dashboard: React.FC = () => <img src={homeImg} alt="Banner Home" />;
 
 export default Dashboard;
