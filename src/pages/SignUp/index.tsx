@@ -102,12 +102,7 @@ const SignUp: React.FC = () => {
               <Input name="firstname" placeholder="Nome" />
               <Input name="lastname" placeholder="Sobrenome" />
               <Input name="email" placeholder="E-mail" />
-              <Input
-                name="password"
-                icon={FiEyeOff}
-                type="password"
-                placeholder="Senha"
-              />
+              <Input name="password" type="password" placeholder="Senha" />
 
               <Button type="submit">Concluir cadastro</Button>
             </Form>

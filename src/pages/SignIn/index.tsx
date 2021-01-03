@@ -92,15 +92,10 @@ const SignIn: React.FC = () => {
               <h1>Fazer login</h1>
               <Inputs>
                 <Input name="email" placeholder="E-mail" />
-                <Input
-                  name="password"
-                  icon={FiEyeOff}
-                  type="password"
-                  placeholder="Senha"
-                />
+                <Input name="password" type="password" placeholder="Senha" />
               </Inputs>
               <RememberAndForgotPassword>
-                <Checkbox>Lembrar-me</Checkbox>
+                {/* <Checkbox>Lembrar-me</Checkbox> */}
 
                 <a href="forgot">Esqueci minha senha</a>
               </RememberAndForgotPassword>

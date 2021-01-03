@@ -44,9 +44,8 @@ export const AnimationContainer = styled.div`
 
 export const FormContent = styled.div`
   width: 400px;
-
+  margin-top: 10%;
   h1 {
-    margin-top: 54px;
     margin-bottom: 21px;
     color: #32264d;
     font-weight: 600;
@@ -64,6 +63,7 @@ export const FormContent = styled.div`
 `;
 
 export const BackToLogin = styled.div`
+  margin-top: 16px;
   width: 400px;
   display: flex;
   justify-content: space-between;

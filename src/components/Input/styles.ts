@@ -24,24 +24,35 @@ export const Container = styled.div<ContainerProps>`
   ${props =>
     props.isErrored &&
     css`
-      border-color: #c53030;
+      /* border-color: #c53030; */
+      ::after {
+        position: absolute;
+        content: ' ';
+        display: inline-block;
+        width: 1.5px;
+        height: 80%;
+        left: 0;
+        background: #c53030;
+        animation: fade 200ms ease-out;
       }
     `}
 
   ${props =>
     props.isFocused &&
     css`
-      ::after {
+      ::before {
         position: absolute;
         content: ' ';
         display: inline-block;
         width: 90%;
         height: 1.5px;
+        left: 5%;
         bottom: 0;
         background: #8257e5;
         animation: fade 200ms ease-out;
       }
     `}
+
 
   @keyframes fade {
     from {
@@ -90,7 +101,7 @@ export const Error = styled(Tooltip)`
   span {
     background: #c53030;
     color: #fff;
-
+    text-align: center;
     &::before {
       border-color: #c53030 transparent;
     }
